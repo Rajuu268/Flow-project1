@@ -1,10 +1,10 @@
-import HelloWorld from 0x01
+import LibraryManagement from 0x01
 
-transaction {
+transaction (_name : String, _price: UInt32) {
 
   prepare(acct: AuthAccount) {}
 
   execute {
-    log(HelloWorld.hello())
+    LibraryManagement.addBook(_name: _name, _price: _price)
   }
 }
